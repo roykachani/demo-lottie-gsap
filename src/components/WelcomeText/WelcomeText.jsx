@@ -17,9 +17,7 @@ const WelcomeText = ({ showText }) => {
 
 	return (
 		<>
-			<p id="text" className="text" hidden={showText && false}>
-				_
-			</p>
+			<p id="text" className="text" hidden={showText && false}></p>
 		</>
 	);
 };

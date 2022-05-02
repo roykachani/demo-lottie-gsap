@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Lottie from 'react-lottie-player';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -12,6 +12,7 @@ import './styles.css';
 const Home = () => {
 	const [showText, setShowText] = useState(true);
 	const [playLottie, setPlayLottie] = useState(false);
+	const lotiRef = useRef(null);
 
 	gsap.registerPlugin(ScrollTrigger);
 
@@ -38,7 +39,7 @@ const Home = () => {
 		},
 	});
 
-	tl.to('.lottie', { scale: 3, duration: 10 });
+	tl.to('.lottie', { scale: 4, duration: 10 });
 	tl.to('.text_container', { opacity: 1 }, '-=8');
 	return (
 		<>
@@ -46,6 +47,7 @@ const Home = () => {
 				<div className="lottie_container">
 					<Nav />
 					<Lottie
+						ref={lotiRef}
 						animationData={animation}
 						speed={0.5}
 						style={{ width: 300, height: 300 }}
