@@ -77,6 +77,9 @@ const Home = () => {
 					<div className="text_container">
 						<WelcomeText showText={showText} />
 					</div>
+					<div className="text_scroll">
+						<p>scroll down to start playing</p>
+					</div>
 				</div>
 			</div>
 		</>
