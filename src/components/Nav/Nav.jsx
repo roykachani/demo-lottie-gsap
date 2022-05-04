@@ -11,7 +11,7 @@ const Nav = () => {
 						</a>
 						<div className="line_container"></div>
 						<div className="logo_description">
-							<span>digital agency</span>
+							<span className="description_title">digital agency</span>
 						</div>
 					</div>
 				</div>
